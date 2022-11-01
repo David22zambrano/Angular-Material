@@ -1,0 +1,52 @@
+// @use 'palette';
+@use '@angular/material' as mat;
+
+$my-palette: (
+    50 : #e0e8eb,
+    100 : #b3c7cd,
+    200 : #80a1ac,
+    300 : #4d7b8a,
+    400 : #265f71,
+    500 : #004358,
+    600 : #003d50,
+    700 : #003447,
+    800 : #002c3d,
+    900 : #001e2d,
+    A100 : #66bdff,
+    A200 : #33a7ff,
+    A400 : #0090ff,
+    A700 : #0082e6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-custom-typography: mat.define-typography-config(
+  $font-family: 'Amatic SC',
+  $body-1:  mat.define-typography-level(.5rem, 10, 500),
+);
+
+@include mat.core($my-custom-typography);
+
+.my-special-section {
+  $special-primary: mat.define-palette($my-palette, 900);
+  $special-accent: mat.define-palette($my-palette, 100);
+  $special-warm: mat.define-palette($my-palette, A700);
+
+  $special-theme: mat.define-dark-theme($special-primary,$special-accent, $special-warm);
+ 
+  @include mat.all-component-themes($special-theme);
+ }
