@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { StopTrainingComponent } from './training/current-training/stop-current-training.component';
+import { AlertComponent } from './app/alert/alert.component';
 
 
 
@@ -34,7 +35,8 @@ import { StopTrainingComponent } from './training/current-training/stop-current-
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    StopTrainingComponent
+    StopTrainingComponent,
+    AlertComponent
     
   ],
   imports: [
@@ -44,7 +46,7 @@ import { StopTrainingComponent } from './training/current-training/stop-current-
     AppRoutingModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
   ],
   providers: [AuthService],

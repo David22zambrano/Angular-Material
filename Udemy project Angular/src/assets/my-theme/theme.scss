@@ -36,37 +36,43 @@ $my-palette: (
 
 $my-custom-typography: mat.define-typography-config(
   $font-family: 'Amatic SC',
-  $body-1:  mat.define-typography-level(.5rem, 2, 500),
+  $body-1:  mat.define-typography-level(1rem, 2, 500),
 );
 
 @include mat.core($my-custom-typography);
 
 
-  $special-primary: mat.define-palette($my-palette, 50);
-  $special-accent: mat.define-palette($my-palette, 50);
+  $special-primary: mat.define-palette($my-palette, 500);
+  $special-accent: mat.define-palette(mat.$indigo-palette, A700);
   $special-warm: mat.define-palette(mat.$red-palette, 500);
 
-  $special-theme: mat.define-dark-theme($special-primary,$special-accent, $special-warm);
+  $special-theme: mat.define-light-theme($special-primary,$special-accent, $special-warm);
  
   @include mat.all-component-themes($special-theme);
  
   
   .mat-button.mat-success,
   .mat-stroked-button.mat-success {
-    color: #ffffff;
+    color: #000;
     background-color: #f0fff342;
     
   }
   .mat-button.mat-success:hover,
   .mat-stroked-button.mat-success:hover {
-    background-color: #f0fff342;
-  }
-  
-  .mat-raised-button.mat-success {
-    color: white;
+    color: #000;
     background-color: #00ef38;
   }
   
+  .mat-raised-button.mat-success,
+  .mat-form-field-label.mat-success,
+  .mat-form-field.mat-focused.mat-success .mat-form-field-ripple  {
+    color: #000;
+    background-color: #00ef38;
+  }
+  .mat-form-field.mat-focused.mat-success .mat-form-field-label{
+    color: #00ef38;
+  }
+  
   .mat-icon-button.mat-success {
-    color:white;
+    color: #000;
   }

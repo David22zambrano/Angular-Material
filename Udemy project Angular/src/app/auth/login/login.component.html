@@ -5,7 +5,7 @@
       fxLayoutGap="10px"
       [formGroup]="loginForm"
       (ngSubmit)="onSubmit()">
-      <mat-form-field>
+      <mat-form-field color="success">
         <input
           type="email"
           matInput
@@ -14,7 +14,7 @@
         <mat-hint>Please enter a valid email.</mat-hint>
         <mat-error>Invalid or missing email.</mat-error>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field color="success">
         <input
           type="password"
           matInput
@@ -23,6 +23,6 @@
         <mat-hint>Please enter your password.</mat-hint>
         <mat-error>Missing password.</mat-error>
       </mat-form-field>
-      <button type="submit" mat-stroked-button color="sucess" [disabled]="loginForm.invalid">Submit</button>
+      <button type="submit" mat-stroked-button color="success" [disabled]="loginForm.invalid">Submit</button>
     </form>
   </section>
