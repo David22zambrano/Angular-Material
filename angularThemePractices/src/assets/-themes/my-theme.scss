@@ -51,32 +51,34 @@ $my-custom-typography: mat.define-typography-config(
   @include mat.all-component-themes($special-theme);
  
   
-  .mat-button.mat-success,
+  .mat-button.mat-success
   .mat-stroked-button.mat-success {
     color: #000;
     background-color: #f0fff342;
     
   }
-  .mat-button.mat-success:hover,
+  .mat-form-field-label {
+    color: rgb(39, 17, 238);
+    // background-color: #00ef38;    
+  }
+  // .mat-form-field.mat-focused.mat-success .mat-form-field-ripple {
+  //   color: #000;
+  //   background-color: #00ef38;
+  // }
+   
+  .mat-button.mat-success:hover
   .mat-stroked-button.mat-success:hover {
     color: #000;
     background-color: #00ef38;
   }
   
-  .mat-raised-button.mat-success,
-  .mat-form-field-label.mat-success,
-  .mat-form-field.mat-focused.mat-success .mat-form-field-ripple  {
+  .mat-raised-button.mat-success {
     color: #000;
     background-color: #00ef38;
-  }
-  .mat-form-field.mat-focused.mat-success .mat-form-field-label{
-    color: #00ef38;
   }
   
   .mat-icon-button.mat-success {
     color: #000;
   }
-.primary{
-  color: #000;
-  background-color: #00ef38;
-}
+
+ 

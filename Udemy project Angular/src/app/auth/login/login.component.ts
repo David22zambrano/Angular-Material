@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -27,4 +29,5 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.value.password
    })
   }
+
 }

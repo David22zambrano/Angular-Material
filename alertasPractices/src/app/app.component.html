@@ -1,0 +1,10 @@
+<mat-sidenav-container>
+  <mat-sidenav> </mat-sidenav>
+  <mat-sidenav-content fxLayoutAlling="space between" >
+    <app-toolbar> </app-toolbar>
+<button mat-button color="success" (click)="showAlert()"> Alert Messaje </button>
+</mat-sidenav-content>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</mat-sidenav-container>

@@ -36,7 +36,7 @@ $my-palette: (
 
 $my-custom-typography: mat.define-typography-config(
   $font-family: 'Amatic SC',
-  $body-1:  mat.define-typography-level(1rem, 2, 500),
+  $body-1:  mat.define-typography-level(1rem, 1, 500),
 );
 
 @include mat.core($my-custom-typography);
@@ -60,6 +60,7 @@ $my-custom-typography: mat.define-typography-config(
   .mat-button.mat-success:hover,
   .mat-stroked-button.mat-success:hover {
     color: #000;
+    
     background-color: #00ef38;
   }
   
@@ -73,10 +74,15 @@ $my-custom-typography: mat.define-typography-config(
     color: #00ef38;
   }
   
-  .mat-icon-button.mat-success {
-    color: #000;
+  .mat-icon-button.mat-success, .mat-snack-bar.mat-success {
+    color: rgb(0, 255, 55);
   }
-.primary{
-  color: #000;
-  background-color: #00ef38;
-}
+
+  .primary{
+    color: #000;
+    background-color: #ef0000;
+  }
+  .warm{
+    color: #000;
+    background-color: #ef0000; 
+  }
