@@ -14,12 +14,29 @@ export class AppComponent {
     public snackBar: MatSnackBar
   ) {}
 
-    showAlert() {
+    successAlert() {
       this.success();
     }
+    infoAlert(){
+      this.primary();
+    }
+    warningAlert(){
+      this.accent()
+    }
+    errorAlert(){
+      this.warm()
+    }
+    success() {
+      this.snackBar.openFromComponent(SnackbarComponent,{
+        panelClass: 'success',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+        duration: 10000
+      });
+      }
 
     primary() {
-    this.snackBar.open('Primary Alert', '' ,{
+    this.snackBar.open('Primary Alert', ' X ' ,{
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
       panelClass: 'primary',
@@ -27,7 +44,7 @@ export class AppComponent {
     });
      }
     accent() {
-      this.snackBar.open('Accent Alert',' ', {
+      this.snackBar.open('Accent Alert',' CLOSE', {
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
         panelClass: 'accent',
@@ -35,21 +52,14 @@ export class AppComponent {
       });
     }
     warm() {
-        this.snackBar.open('Warm Alert', 'Close', {
+        this.snackBar.open('Warm Alert', 'OK', {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
           panelClass: 'warm',
           duration: 10000,
         });
      }
-   success() {
-    this.snackBar.open('Succes Alert', 'Close',{
-      panelClass: 'primary',
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom',
-      duration: 10000
-    });
-    }
+
 }
 
 

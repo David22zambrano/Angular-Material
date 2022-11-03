@@ -11,6 +11,7 @@ import { MatSidenav, MatSidenavModule    } from '@angular/material/sidenav';
 import { MatToolbarModule    } from '@angular/material/toolbar';
 import { MatListModule       } from '@angular/material/list';
 import { MatTabsModule       } from '@angular/material/tabs';
+import { MatRadioModule      } from '@angular/material/radio';
 
 
 const componets = [
@@ -23,7 +24,8 @@ const componets = [
   MatCheckboxModule,
   MatSidenavModule,
   MatListModule,
-  MatTabsModule
+  MatTabsModule,
+  MatRadioModule
 
 ]
 

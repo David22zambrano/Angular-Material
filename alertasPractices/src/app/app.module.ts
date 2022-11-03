@@ -12,6 +12,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout'
 
 
 
@@ -19,15 +20,17 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
   declarations: [
     AppComponent,
     SnackbarComponent,
-    ToolbarComponent
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MaterialModule,
     MatDialogModule,
     MatSnackBarModule,
+    
 
   ],
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],

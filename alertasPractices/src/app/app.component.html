@@ -1,10 +1,39 @@
 <mat-sidenav-container>
   <mat-sidenav> </mat-sidenav>
-  <mat-sidenav-content fxLayoutAlling="space between" >
-    <app-toolbar> </app-toolbar>
-<button mat-button color="success" (click)="showAlert()"> Alert Messaje </button>
+  <mat-sidenav-content fxLayoutGap="10">
+    <app-toolbar></app-toolbar>
+    
+    <section  fxLayoutAlign="center center" >
+      <button class="example" mat-button color="success" (click)="successAlert()">
+        Personalized Alert Messaje
+      </button>
+      <button class="example" mat-button color="success" (click)="primary()">
+        Primary
+      </button>
+      <button class="example" mat-button color="success" (click)="accent()">
+        Alert Messaje
+      </button>
+      <button class="example" mat-button color="success" (click)="warm()">
+        Alert Messaje
+      </button>
+    </section>
+    <section fxLayoutAlign="center center" fxLayoutGap="10" style="padding: 10px;">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="First">Content 1</mat-tab>
+        <mat-tab label="Second">Content 2</mat-tab>
+        <mat-tab label="Third">Content 3</mat-tab>
+      </mat-tab-group>
+    </section> 
+
+    <section>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+          </mat-radio-group>
+    </section>
 </mat-sidenav-content>
-  <main>
+
+<main>
     <router-outlet></router-outlet>
   </main>
 </mat-sidenav-container>
