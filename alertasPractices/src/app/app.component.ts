@@ -1,7 +1,7 @@
 import {Component, Inject,OnInit } from '@angular/core';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
-import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { SnackbarComponent } from '../assets/componentes-material/snackbar/snackbar.component';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +31,7 @@ export class AppComponent {
         panelClass: 'success',
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
-        duration: 10000
+        duration: 3000
       });
       }
 
@@ -40,7 +40,7 @@ export class AppComponent {
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
       panelClass: 'primary',
-      duration: 10000
+      duration: 3000
     });
      }
     accent() {
@@ -48,7 +48,7 @@ export class AppComponent {
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
         panelClass: 'accent',
-        duration: 10000
+        duration: 3000
       });
     }
     warm() {
@@ -56,7 +56,7 @@ export class AppComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
           panelClass: 'warm',
-          duration: 10000,
+          duration: 3000,
         });
      }
 

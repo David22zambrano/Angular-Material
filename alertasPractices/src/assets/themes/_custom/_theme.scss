@@ -1,0 +1,116 @@
+// @use 'palette';
+@use '@angular/material' as mat;
+
+$my-palette: (
+  50: #fffaed,
+  100: #fff4d1,
+  200: #ffecb3,
+  300: #ffe494,
+  400: #ffdf7d,
+  500: #ffd966,
+  600: #ffd55e,
+  700: #ffcf53,
+  800: #ffca49,
+  900: #ffc038,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff5e1,
+  A700: #ffedc8,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-custom-typography: mat.define-typography-config(
+  $font-family: "Amatic SC",
+  $body-1: mat.define-typography-level(1rem, 1, 500),
+);
+$my-custom-typography: mat.define-light-theme(
+  (
+    typography:( $my-custom-typography)
+  )
+);
+// @include mat.core($my-custom-typography);
+
+@include mat.all-component-themes($my-custom-typography);
+
+@include mat.core($my-custom-typography);
+
+  $special-primary: mat.define-palette($my-palette, 400);
+  $special-accent: mat.define-palette(mat.$indigo-palette, A700);
+  $special-warm: mat.define-palette(mat.$red-palette, 500);
+
+  $special-theme: mat.define-light-theme($special-primary,$special-accent, $special-warm);
+
+  
+  $special-theme: mat.define-dark-theme($special-primary,$special-accent, $special-warm);
+ 
+  @include mat.all-component-themes($special-theme);
+ 
+
+  
+  
+  .mat-button.mat-success,
+  .mat-stroked-button.mat-success {
+    color: #000;
+    background-color: #f0fff342;
+  }
+  .mat-button.mat-success:hover,
+  .mat-stroked-button.mat-success:hover {
+    color: #000;
+  
+    background-color: #00ef38;
+  }
+  
+  .mat-raised-button.mat-success,
+  .mat-form-field-label.mat-success,
+  .mat-form-field.mat-focused.mat-success .mat-form-field-ripple {
+    color: #000;
+    background-color: #00ef38;
+  }
+  .mat-form-field.mat-focused.mat-success .mat-form-field-label {
+    color: #00ef38;
+  }
+  
+  .mat-icon-button.mat-success,
+  .mat-snack-bar.mat-success {
+    color: rgb(0, 255, 55);
+  }
+  .success {
+    color: #000;
+    background-color: #f0fff342;
+  }
+  .accent {
+    color: #000;
+    background-color: #ffc038;
+  }
+  .primary {
+    color: #000;
+    background-color: #0050ef;
+  }
+  .warm {
+    color: #000 !important;
+    background-color: #ef0000;
+  }
+  .mat-simple-snackbar-action {
+    color: #000000;
+  }
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple {
+    background-color: red;
+  }
+  .mat-radio-button.mat-accent .mat-radio-inner-circle{
+    background-color: red;
+  }

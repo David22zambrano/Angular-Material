@@ -8,11 +8,12 @@ import { MaterialModule } from './material.module';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
-import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { SnackbarComponent } from '../assets/componentes-material/snackbar/snackbar.component';
 import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ToolbarComponent } from '../assets/componentes-material/toolbar/toolbar.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
-import { FlexLayoutModule } from '@angular/flex-layout'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatTabComponent } from '../assets/componentes-material/mat-tab/mat-tab.component'
 
 
 
@@ -21,6 +22,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
     AppComponent,
     SnackbarComponent,
     ToolbarComponent,
+    MatTabComponent,
   ],
   imports: [
     BrowserModule,

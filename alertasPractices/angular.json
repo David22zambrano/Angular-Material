@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "./src/assets/themes/theme.scss",
+              "src/assets/estructura-7-1/estructura-7-1/main.scss",
               "src/styles.scss"
             ],
             "scripts": []
