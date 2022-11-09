@@ -1,19 +1,74 @@
-<mat-tab-group
-  fxLayout="column"
-  mat-align-tabs="center"
-  fxLayoutGap="10"
-  style="padding: 10px"
->
-  <mat-tab label="First">
-    <section fxLayoutAlign="center center">
+<mat-tab-group>
+  <mat-tab label="radio bottones mat-tab">
+    <section>
       <mat-radio-group aria-label="Select an option">
         <mat-radio-button value="1">Option 1</mat-radio-button>
         <mat-radio-button value="2">Option 2</mat-radio-button>
       </mat-radio-group>
     </section>
   </mat-tab>
-  <mat-tab label="Second">Content 2</mat-tab>
-  <mat-tab label="Third">Content 3</mat-tab>
 
+  <mat-tab label="Alertas ">
+    <section class="alerta">
+      <button
+        class="example"
+        mat-raised-button
+        color="success"
+        (click)="successAlert()"
+      >
+        Personalized Alert Messaje
+      </button>
+      <button
+        class="example"
+        mat-raised-button
+        color="primary"
+        (click)="primary()"
+      >
+        Primary
+      </button>
+      <button
+        class="example"
+        mat-raised-button
+        color="primary"
+        (click)="accent()"
+      >
+        Accent Messaje
+      </button>
+      <button class="example" mat-raised-button color="warm" (click)="warm()">
+        Alert Messaje
+      </button>
+    </section>
+  </mat-tab>
 
+  <mat-tab label="mat chips ">
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip color="success">One</mat-chip>
+      <mat-basic-chip color="primary">Primary</mat-basic-chip>
+      <mat-basic-chip color="accent" selected>Accent </mat-basic-chip>
+      <mat-chip color="warm">Warm</mat-chip>
+    </mat-chip-list>
+  </mat-tab>
+
+  <mat-tab label="mat Card " class="mat-tab">
+    <mat-card class="mat-card">
+      <mat-card-header class="mat-card__header">
+      <mat-card-subtitle class="mat-card-header__subtitle">
+        <p>Dog Breed</p>
+      </mat-card-subtitle>
+      <mat-card-title class="mat-card-header__title">Shiba Inu</mat-card-title>
+    </mat-card-header>
+      <mat-card-content class="mat-card__content">
+        <p>This card has divider and indeterminate progress as footer</p>
+        <p>test functionality</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+      <mat-card-footer>
+        <mat-progress-bar mode="query"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="" class="mat-tab"> </mat-tab>
 </mat-tab-group>

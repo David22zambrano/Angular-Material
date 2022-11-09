@@ -1,26 +1,16 @@
 <mat-sidenav-container>
   <mat-sidenav> </mat-sidenav>
-  <mat-sidenav-content fxLayoutGap="10">
-    <app-toolbar></app-toolbar>
-    
-    <section  fxLayoutAlign="center center" >
-      <button class="example" mat-raised-button color="success" (click)="successAlert()">
-        Personalized Alert Messaje
-      </button>
-      <button class="example" mat-raised-button color="primary" (click)="primary()">
-        Primary
-      </button>
-      <button class="example" mat-raised-button color="primary" (click)="accent()">
-       Accent Messaje
-      </button>
-      <button class="example" mat-raised-button color="warm" (click)="warm()">
-        Alert Messaje
-      </button>
-    </section>
-
+  <mat-sidenav-content>
+    <app-header>
+    </app-header>
+    <!-- <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)">
+      <mat-icon>
+        {{ mode }}
+      </mat-icon>
+    </mat-slide-toggle> -->
     <app-mat-tab></app-mat-tab>
-</mat-sidenav-content>
-<main>
+  </mat-sidenav-content>
+  <main>
     <router-outlet></router-outlet>
   </main>
 </mat-sidenav-container>

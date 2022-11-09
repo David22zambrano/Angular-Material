@@ -1,16 +1,30 @@
-
-<mat-toolbar fxLayoutAlign="space-between center">
+<mat-toolbar  class="toolbar">
+<div>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <section >
-    <span>ICON</span>
-    <span class="example-spacer"></span>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+    </div>
+      <span class="example-spacer"></span>
+  
+    <div >
+        <ul>
+            <li>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
     </button>
+    </li>
+    <li>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
-    </section>
+    </li>
+        </ul>
+    </div>
+    <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" >
+      <mat-icon>
+{{mode}}
+      </mat-icon>
+    </mat-slide-toggle>
+
   </mat-toolbar>

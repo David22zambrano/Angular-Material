@@ -10,10 +10,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SnackbarComponent } from '../assets/componentes-material/snackbar/snackbar.component';
 import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
-import { ToolbarComponent } from '../assets/componentes-material/toolbar/toolbar.component';
+
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatTabComponent } from '../assets/componentes-material/mat-tab/mat-tab.component'
+import { MatTabComponent } from '../assets/componentes-material/mat-tab/mat-tab.component';
+import { HeaderComponent } from '../assets/componentes-material/header/header.component';
+
+  
+
 
 
 
@@ -21,19 +24,18 @@ import { MatTabComponent } from '../assets/componentes-material/mat-tab/mat-tab.
   declarations: [
     AppComponent,
     SnackbarComponent,
-    ToolbarComponent,
     MatTabComponent,
+    HeaderComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
     MaterialModule,
     MatDialogModule,
     MatSnackBarModule,
-    
-
+    MatSidenavModule,
   ],
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],
   bootstrap: [AppComponent]

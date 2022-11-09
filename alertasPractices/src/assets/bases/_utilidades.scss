@@ -1,0 +1,25 @@
+.margin {
+    margin: $margen-normal;
+  }
+  .margin-inline {
+    margin-inline: $margen-enlinea-peque;
+  }
+  .margin-inline-normal {
+    margin-inline: $margen-enlinea-regular;
+  }
+  .margin-inline-regular{
+    margin-inline: $margen-enlinea-regular;
+  }
+  // padding variantes
+  .padding {
+    padding: $padding-normal;
+  }
+  .padding-inline {
+    padding-inline: $padding-enlinea-peque;
+  }
+  .padding-inline-normal {
+    padding-inline: $padding-enlinea-normal;
+  }
+  .padding-inline-regular {
+    padding-inline: $padding-enlinea-regular;
+  }

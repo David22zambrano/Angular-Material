@@ -1,6 +1,65 @@
+.display-flex{
+    display: flex;
+}
+.aling-justify-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aling-start{
+    align-items: flex-start;
+}
+.aling-end{
+    align-items: flex-end;
+}
+.justify-start{
+    justify-content: flex-start;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+// .alingStart-justifyCenter{
+//     align-items: flex-start;
+//     justify-content: center;
+// }
+// .alingEnd-justifyCenter{
+//     align-items: flex-end;
+//     justify-content: center;
+// }
+// .alingCenter-justifyStart{
+//     align-items: center;
+//     justify-content: flex-start;
+// }
+// .alingCenter-justifyEnd{
+//     align-items: center;
+//     justify-content: flex-end;
+// }
+
+
+// variantes margenes
 .margin {
-    
-}
-.margin-inline{
-    // margin-inline: ;
-}
+    margin: $margen-normal;
+  }
+  .margin-inline {
+    margin-inline: $margen-enlinea-peque;
+  }
+  .margin-inline-normal {
+    margin-inline: $margen-enlinea-regular;
+  }
+  .margin-inline-regular{
+    margin-inline: $margen-enlinea-regular;
+  }
+  
+  .padding {
+    padding: $padding-normal;
+  }
+  .padding-inline {
+    padding-inline: $padding-enlinea-peque;
+  }
+  .padding-inline-normal {
+    padding-inline: $padding-enlinea-normal;
+  }
+  .padding-inline-regular {
+    padding-inline: $padding-enlinea-regular;
+  }
+  

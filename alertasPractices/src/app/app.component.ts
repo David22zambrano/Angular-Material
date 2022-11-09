@@ -31,7 +31,7 @@ export class AppComponent {
         panelClass: 'success',
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
-        duration: 3000
+        duration: 300000
       });
       }
 

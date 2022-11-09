@@ -1,12 +1,11 @@
-@import './bases/_typography';
 
-@import './bases/base';
-
-// @import './componentes-material/mat-tab/mat-tab.component.scss';
-// @import './componentes-material/snackbar/snackbar.component.scss';
-// @import './componentes-material/toolbar/toolbar.component.scss';
+// @import './abstract/_variables';
+// @import './bases/tipografia';
+// @import './bases/base';
+// @import './bases/_utilidades';
 
 @import './abstract/functions';
-@import './abstract/_variables';
 
-// @import 'themes/main.scss';
+@import 'themes/main.scss';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

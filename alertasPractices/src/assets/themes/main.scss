@@ -1,7 +1,16 @@
+@import "bases/tipografia";
+@import "abstract/variables";
+@import "bases/_utilities.scss";
+
 @import '../componentes-material/mat-tab/mat-tab.component.scss';
 @import '../componentes-material/snackbar/snackbar.component.scss';
-@import '../componentes-material/toolbar/toolbar.component.scss';
+// @import '../componentes-material/toolbar/toolbar.component.scss';
 
+@import "abstract/functions";
+@import "abstract/mixin";
+
+
+@import "bases/animations";
 @import '_custom/_theme.scss';
 
 

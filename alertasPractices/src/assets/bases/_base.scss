@@ -5,8 +5,10 @@
   padding: 0%;
   box-sizing: inherit;
 }
-
-html {
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
   font-size: 0.625rem;
 }
 
