@@ -1,14 +1,20 @@
-<mat-tab-group>
-  <mat-tab label="radio bottones mat-tab">
-    <section>
-      <mat-radio-group aria-label="Select an option">
+<mat-tab-group class="mat-tab-group">
+  <mat-tab label="radio bottones" class="mat-tab-group__tap-1">
+      <mat-radio-group aria-label="Select an option" class="mat-radio-group">
         <mat-radio-button value="1">Option 1</mat-radio-button>
         <mat-radio-button value="2">Option 2</mat-radio-button>
+        <mat-radio-button value="1">Option 3</mat-radio-button>
+        <mat-radio-button value="2">Option 4</mat-radio-button>
+        <mat-radio-button value="1">Option 5</mat-radio-button>
+        <mat-radio-button value="2">Option 6</mat-radio-button>
       </mat-radio-group>
-    </section>
-  </mat-tab>
 
-  <mat-tab label="Alertas ">
+      <button mat-stroked-button color="accent">Home</button>
+      <button mat-stroked-button color="primary">Home</button>
+      <button mat-stroked-button color="primary">Home</button>
+      
+  </mat-tab>
+  <mat-tab label="Alertas " class="mat-tab-group__tap-2">
     <section class="alerta">
       <button
         class="example"
@@ -29,7 +35,7 @@
       <button
         class="example"
         mat-raised-button
-        color="primary"
+        color="accent"
         (click)="accent()"
       >
         Accent Messaje
@@ -40,17 +46,17 @@
     </section>
   </mat-tab>
 
-  <mat-tab label="mat chips ">
+  <mat-tab label="mat chips " class="mat-tab-group__tap-3">
     <mat-chip-list aria-label="Fish selection">
-      <mat-chip color="success">One</mat-chip>
-      <mat-basic-chip color="primary">Primary</mat-basic-chip>
-      <mat-basic-chip color="accent" selected>Accent </mat-basic-chip>
-      <mat-chip color="warm">Warm</mat-chip>
+      <mat-chip color="success" selected>One</mat-chip>
+      <mat-chip color="primary" selected>Primary</mat-chip>
+      <mat-chip color="accent" selected>Accent </mat-chip>
+      <mat-chip color="warm" selected>Warm</mat-chip>
     </mat-chip-list>
   </mat-tab>
 
-  <mat-tab label="mat Card " class="mat-tab">
-    <mat-card class="mat-card">
+  <mat-tab label="mat Card " class="mat-tab-group__tab-4 flex aling-center">
+    <mat-card class="mat-card ">
       <mat-card-header class="mat-card__header">
       <mat-card-subtitle class="mat-card-header__subtitle">
         <p>Dog Breed</p>
@@ -70,5 +76,5 @@
       </mat-card-footer>
     </mat-card>
   </mat-tab>
-  <mat-tab label="" class="mat-tab"> </mat-tab>
+
 </mat-tab-group>

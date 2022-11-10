@@ -1,14 +1,15 @@
-.toolbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+ .toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+//   color: $font-color-lightTheme;
 
-    
-    & ul, li {
-        display: flex;
-        list-style: none;
-    }
-    & .example-spacer {
-        flex: 1 1 auto;
-      }
+  & ul,
+  li {
+    display: flex;
+    list-style: none;
+  }
+  & .example-spacer {
+    flex: 1 1 auto;
+  }
 }

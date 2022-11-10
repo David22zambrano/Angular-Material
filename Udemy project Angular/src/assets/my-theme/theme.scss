@@ -1,82 +1,233 @@
 // @use 'palette';
 @use '@angular/material' as mat;
+$font-color-lightTheme: #000;
+$font-color-darkTheme: #fff;
+
+$success-color: #00ef38;
+$primary-color: #0050ef;
+$accent-color: #ffc038;
+
+$dark-A100: #66bdff;
+$dark-A200 : #33a7ff;
+$dark-A400 : #0090ff;
+$dark-A700 : #0082e6;
 
 $my-palette: (
-  50 : #fffaed,
-  100 : #fff4d1,
-  200 : #ffecb3,
-  300 : #ffe494,
-  400 : #ffdf7d,
-  500 : #ffd966,
-  600 : #ffd55e,
-  700 : #ffcf53,
-  800 : #ffca49,
-  900 : #ffc038,
-  A100 : #ffffff,
-  A200 : #ffffff,
-  A400 : #fff5e1,
-  A700 : #ffedc8,
+  50 : #e0e8eb,
+  100 : #b3c7cd,
+  200 : #80a1ac,
+  300 : #4d7b8a,
+  400 : #265f71,
+  500 : #004358,
+  600 : #003d50,
+  700 : #003447,
+  800 : #002c3d,
+  900 : #001e2d,
+  A100 : #66bdff,
+  A200 : #33a7ff,
+  A400 : #0090ff,
+  A700 : #0082e6,
   contrast: (
       50 : #000000,
       100 : #000000,
       200 : #000000,
-      300 : #000000,
-      400 : #000000,
-      500 : #000000,
-      600 : #000000,
-      700 : #000000,
-      800 : #000000,
-      900 : #000000,
-      A100 : #000000,
-      A200 : #000000,
-      A400 : #000000,
-      A700 : #000000,
-  )
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : $dark-A100,
+      A200 : $dark-A200,
+      A400 : $dark-A400,
+      A700 : $dark-A700,
+  ),
 );
 
 $my-custom-typography: mat.define-typography-config(
-  $font-family: 'Amatic SC',
-  $body-1:  mat.define-typography-level(1rem, 2, 500),
+  $font-family:   "Roboto",
+  $headline:     mat.define-typography-level(2.4rem, 3.2, 400),
+  $title:        mat.define-typography-level(2.0rem, 3.2, 500),
+  $subheading-2: mat.define-typography-level(1.6rem, 2.8, 400),
+  $subheading-1: mat.define-typography-level(1.5rem, 2.4, 400),
+  $body-2:       mat.define-typography-level(1.4rem, 2.4, 500),
+  $body-1:       mat.define-typography-level(1.4rem, 2, 400),
+  $caption:      mat.define-typography-level(1.2rem, 2, 400),
+  $button:       mat.define-typography-level(1.4rem, 1, 500),
+  $input:        mat.define-typography-level(1.2rem, 1, 400)
 );
+
+$my-custom-typography: mat.define-light-theme(
+  (
+    typography:( $my-custom-typography)
+  )
+);
+
+@include mat.all-component-themes($my-custom-typography);
 
 @include mat.core($my-custom-typography);
 
-
-  $special-primary: mat.define-palette($my-palette, 500);
-  $special-accent: mat.define-palette(mat.$indigo-palette, A700);
+  $special-primary: mat.define-palette($my-palette, 400);
+  $special-accent: mat.define-palette(mat.$indigo-palette, 900);
   $special-warm: mat.define-palette(mat.$red-palette, 500);
+  $special-typography: mat.define-typography-config($my-custom-typography);
+  $special-theme: mat.define-light-theme(
+    (
+      colores: ($special-primary,$special-accent, $special-warm)
+    ),
+    (
+      tipografia: ($my-custom-typography)
+    )
+     );
 
-  $special-theme: mat.define-light-theme($special-primary,$special-accent, $special-warm);
- 
+
+  $dark-primary: mat.define-palette($my-palette, A400);
+  $dark-accent: mat.define-palette(mat.$indigo-palette, A700);
+  $dark-warm: mat.define-palette(mat.$red-palette, A100);
+  $dark-theme: mat.define-dark-theme($dark-primary,$dark-accent, $dark-warm);
+
   @include mat.all-component-themes($special-theme);
- 
+  @include mat.button-color($special-theme);
+
+.dark-theme{
+    @include mat.all-component-themes($dark-theme );
+    @include mat.button-color($dark-theme);
+  }
+
+  //LIGHT THEME 
+
+// LIGHT THEME - Success color
   
+
   .mat-button.mat-success,
   .mat-stroked-button.mat-success {
-    color: #000;
+    color: $font-color-lightTheme;
     background-color: #f0fff342;
-    
   }
   .mat-button.mat-success:hover,
   .mat-stroked-button.mat-success:hover {
-    color: #000;
+    color: $font-color-lightTheme;
     background-color: #00ef38;
   }
   
   .mat-raised-button.mat-success,
   .mat-form-field-label.mat-success,
-  .mat-form-field.mat-focused.mat-success .mat-form-field-ripple  {
-    color: #000;
-    background-color: #00ef38;
+  .mat-form-field.mat-focused.mat-success .mat-form-field-ripple {
+    color: $font-color-lightTheme;
+    background-color: $success-color;
   }
-  .mat-form-field.mat-focused.mat-success .mat-form-field-label{
-    color: #00ef38;
+  .mat-form-field.mat-focused.mat-success .mat-form-field-label {
+    color: $font-color-lightTheme;
   }
   
-  .mat-icon-button.mat-success {
-    color: #000;
+  .mat-icon-button.mat-success,
+  .mat-snack-bar.mat-success {
+    color: $font-color-lightTheme
   }
-.primary{
-  color: #000;
-  background-color: #00ef38;
+  .success {
+    color: $font-color-lightTheme;
+    background-color: $success-color;
+  }
+  // LIGHT THEME - PRIMARY COLOR
+  .mat-checkbox-checkmark-path{
+    stroke: #000 !important;
+  }
+  .mat-checkbox-checkmark.mat-primary{
+    background-color: $primary-color;
+  }
+  .mat-toolbar.mat-primary{
+    color: $font-color-lightTheme;
+    background-color: $primary-color;
+  }
+  .mat-button.mat-primary,
+  .mat-stroked-button.mat-primary {
+    color: $font-color-lightTheme;
+    background-color: $primary-color;
+  }
+  .mat-button.mat-success:hover,
+  .mat-stroked-button.mat-success:hover {
+    color: $font-color-lightTheme;
+    background-color: #0050ef58;
+  }
+  .mat-raised-button.mat-primary,
+  .mat-form-field-label.mat-primary,
+  .mat-form-field.mat-focused.mat-primary .mat-form-field-ripple {
+    color: $font-color-lightTheme;
+    background-color: $primary-color;
+  }
+
+  .primary {
+    color: $font-color-lightTheme;
+    background-color: $primary-color;
+  }
+
+// LIGHT THEME - ACCENT COLOR
+.mat-button.mat-accent,
+  .mat-stroked-button.mat-accent {
+    color: $font-color-lightTheme;
+    background-color: $accent-color;
+  }
+  .mat-button.mat-success:hover,
+  .mat-stroked-button.mat-success:hover {
+    color: $font-color-lightTheme;
+    background-color: #ffc03895;
+  }
+  .mat-raised-button.mat-accent,
+  .mat-form-field-label.mat-accent,
+  .mat-form-field.mat-focused.mat-accent .mat-form-field-ripple {
+    color: $font-color-lightTheme;
+    background-color: $accent-color;
+  }
+.mat-toolbar.mat-accent{
+  color: $font-color-lightTheme;
+  background-color: $accent-color;
+
 }
+  .accent {
+    color: $font-color-lightTheme;
+    background-color: $accent-color;
+  }
+
+  //LIGHT THEME - WARM COLOR
+  .warm {
+    color: $font-color-lightTheme !important;
+    background-color: #ef0000;
+  }
+
+  //LIGHT THEME
+  .mat-simple-snackbar-action {
+    color: $font-color-lightTheme;
+  }
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple {
+    background-color: red;
+  }
+  .mat-radio-button.mat-accent .mat-radio-inner-circle{
+    background-color: red;
+  }
+
+
+  //colores dark theme
+  .dark-theme .mat-toolbar.mat-primary, .mat-toolbar.mat-accent, .mat-toolbar.mat-warm, .mat-toolbar.mat-success {
+    color: $font-color-darkTheme;
+    
+  }
+  .dark-theme  .primary {
+    color: $font-color-darkTheme;
+    background-color: #0050ef;
+  }
+  .dark-theme .accent {
+    background-color: #ffc038;
+  }
+  .dark-theme .mat-toolbar.mat-accent{
+    background-color: $accent-color;
+  }
+  // DARK THEME - SUCCESS
+  .dark-theme  .success {
+    background-color: #f0fff342;
+  }
+  .dark-theme.mat-button.mat-success,
+  .mat-stroked-button.mat-success {
+    color: $font-color-darkTheme;
+    background-color: #f0fff342;
+  }

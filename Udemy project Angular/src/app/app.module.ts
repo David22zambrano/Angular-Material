@@ -24,6 +24,7 @@ import { StopTrainingComponent } from './training/current-training/stop-current-
 import { SnackbarComponent } from './app/Components/snackbar.component';
 import { MatSnackBarModule     } from '@angular/material/snack-bar';
 import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
+import { SmallBottonDirective } from './directivas/small-botton.directive';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
     HeaderComponent,
     SidenavListComponent,
     StopTrainingComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    SmallBottonDirective,
 
     
   ],

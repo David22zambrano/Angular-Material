@@ -1,11 +1,11 @@
-<mat-toolbar class="mat-toolbar" color="primary">
-  <div>
+<mat-toolbar class="mat-toolbar aling-justify-center" color="primary">
+  <div class="mat-toolbar__menu aling-justify-center">
     <button mat-icon-button (click)="onToggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <div class="logo">Logo</div>
-  <div class="navitagion-container">
+  <div class="mat-toolbar__logo "> Logo</div>
+  <div class="mat-toolbar__navigation navitagion-container ">
     <ul class="navigation-container__items">
       <li *ngIf="!isAuth">
          <a routerLink="/singup"> Singup </a> 
@@ -20,7 +20,9 @@
         <a (click)="onLogout()">Logout</a>
       </li>
       <li>
-        <mat-slide-toggle>Slide me!</mat-slide-toggle>
+        <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" class=""> <p>Slide me!</p>
+        <mat-icon>{{mode}}</mat-icon>
+      </mat-slide-toggle>
       </li>
     </ul>
   </div>

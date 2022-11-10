@@ -14,6 +14,8 @@ import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabComponent } from '../assets/componentes-material/mat-tab/mat-tab.component';
 import { HeaderComponent } from '../assets/componentes-material/header/header.component';
+import { DirectivasDirective } from './directivas.directive';
+import { SmallBottonDirective } from './directivas/small-botton.directive';
 
   
 
@@ -26,6 +28,8 @@ import { HeaderComponent } from '../assets/componentes-material/header/header.co
     SnackbarComponent,
     MatTabComponent,
     HeaderComponent,
+    DirectivasDirective,
+    SmallBottonDirective,
 
   ],
   imports: [
