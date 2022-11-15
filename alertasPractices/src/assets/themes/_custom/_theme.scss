@@ -5,9 +5,10 @@ $font-color-darkTheme: #fff;
 
 $success-color: #00ef38;
 $primary-color: #0050ef;
-$accent-color: #ffc038;
+$accent-color : #ffc038;
+$warm-color   : #ef0000;
 
-$dark-A100: #66bdff;
+$dark-A100 :  #66bdff;
 $dark-A200 : #33a7ff;
 $dark-A400 : #0090ff;
 $dark-A700 : #0082e6;
@@ -60,7 +61,7 @@ $my-custom-typography: mat.define-typography-config(
 
 $my-custom-typography: mat.define-light-theme(
   (
-    typography:( $my-custom-typography)
+    typography:($my-custom-typography)
   )
 );
 
@@ -68,9 +69,9 @@ $my-custom-typography: mat.define-light-theme(
 
 @include mat.core($my-custom-typography);
 
-  $special-primary: mat.define-palette($my-palette, 400);
-  $special-accent: mat.define-palette(mat.$indigo-palette, 900);
-  $special-warm: mat.define-palette(mat.$red-palette, 500);
+  $special-primary: mat.define-palette($my-palette);
+  $special-accent: mat.define-palette(mat.$pink-palette);
+  $special-warm: mat.define-palette(mat.$red-palette);
   $special-typography: mat.define-typography-config($my-custom-typography);
   $special-theme: mat.define-light-theme(
     (
@@ -81,9 +82,8 @@ $my-custom-typography: mat.define-light-theme(
     )
      );
 
-
   $dark-primary: mat.define-palette($my-palette, A400);
-  $dark-accent: mat.define-palette(mat.$indigo-palette, A700);
+  $dark-accent: mat.define-palette(mat.$indigo-palette, 100);
   $dark-warm: mat.define-palette(mat.$red-palette, A100);
   $dark-theme: mat.define-dark-theme($dark-primary,$dark-accent, $dark-warm);
 
@@ -92,103 +92,103 @@ $my-custom-typography: mat.define-light-theme(
 
 .dark-theme{
     @include mat.all-component-themes($dark-theme );
-    @include mat.button-color($dark-theme);
+    // @include mat.button-color($dark-theme);
   }
 
   //LIGHT THEME 
 
+  .mat-success, .mat-primary, .mat-accent, .mat-warm {
+    color: $font-color-lightTheme;
+  }
 // LIGHT THEME - Success color
-  
-
   .mat-button.mat-success,
   .mat-stroked-button.mat-success {
-    color: $font-color-lightTheme;
-    background-color: #f0fff342;
+    background-color: $success-color;
   }
   .mat-button.mat-success:hover,
   .mat-stroked-button.mat-success:hover {
-    color: $font-color-lightTheme;
-    background-color: #00ef38;
+    background-color: $success-color;
   }
   
   .mat-raised-button.mat-success,
   .mat-form-field-label.mat-success,
   .mat-form-field.mat-focused.mat-success .mat-form-field-ripple {
-    color: $font-color-lightTheme;
     background-color: $success-color;
-  }
-  .mat-form-field.mat-focused.mat-success .mat-form-field-label {
-    color: $font-color-lightTheme;
-  }
-  
-  .mat-icon-button.mat-success,
-  .mat-snack-bar.mat-success {
-    color: $font-color-lightTheme
   }
   .success {
-    color: $font-color-lightTheme;
     background-color: $success-color;
   }
+
   // LIGHT THEME - PRIMARY COLOR
+
   .mat-button.mat-primary,
   .mat-stroked-button.mat-primary {
-    color: $font-color-lightTheme;
+    // color: $font-color-lightTheme;
     background-color: $primary-color;
   }
-  .mat-button.mat-success:hover,
-  .mat-stroked-button.mat-success:hover {
-    color: $font-color-lightTheme;
-    background-color: #0050ef58;
+  .mat-button.mat-primary:hover,
+  .mat-stroked-button.mat-primary:hover {
+    // color: $font-color-lightTheme;
+    background-color: $primary-color;
   }
   .mat-raised-button.mat-primary,
   .mat-form-field-label.mat-primary,
-  .mat-form-field.mat-focused.mat-primary .mat-form-field-ripple {
-    color: $font-color-lightTheme;
+  .mat-form-field.mat-focused.mat-primary .mat-form-field-ripple,
+  .mat-chip.mat-primary,
+  .mat-chip.mat-standard-chip.mat-primary,
+  .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary  {
+    // color: $font-color-lightTheme;
     background-color: $primary-color;
   }
 
   .primary {
-    color: $font-color-lightTheme;
+    // color: $font-color-lightTheme;
     background-color: $primary-color;
   }
 
 // LIGHT THEME - ACCENT COLOR
 .mat-button.mat-accent,
   .mat-stroked-button.mat-accent {
-    color: $font-color-lightTheme;
     background-color: $accent-color;
   }
-  .mat-button.mat-success:hover,
-  .mat-stroked-button.mat-success:hover {
-    color: $font-color-lightTheme;
-    background-color: #ffc03895;
+  .mat-button.mat-accent:hover,
+  .mat-stroked-button.mat-accent:hover {
+    background-color: $accent-color;
   }
   .mat-raised-button.mat-accent,
   .mat-form-field-label.mat-accent,
-  .mat-form-field.mat-focused.mat-accent .mat-form-field-ripple {
-    color: $font-color-lightTheme;
+  .mat-form-field.mat-focused.mat-accent .mat-form-field-ripple.mat-accent,
+  .mat-chip.mat-standard-chip.mat-accent,
+  .mat-chip.mat-standard-chip.mat-chip-selected.mat-accent {
     background-color: $accent-color;
   }
 .mat-toolbar.mat-accent{
-  color: $font-color-lightTheme;
   background-color: $accent-color;
 
 }
   .accent {
-    color: $font-color-lightTheme;
+    // color: $font-color-lightTheme;
     background-color: $accent-color;
   }
 
   //LIGHT THEME - WARM COLOR
   .warm {
-    color: $font-color-lightTheme !important;
-    background-color: #ef0000;
+    color: $font-color-lightTheme ;
+    background-color: $warm-color;
+  }
+  .mat-snack-bar.mat-warm {
+    // color: $font-color-lightTheme;
+    background-color: $warm-color;
+  }
+  .mat-button.mat-warm:hover,
+  .mat-stroked-button.mat-warm:hover,
+  .mat-chip.mat-standard-chip.mat-warm,
+  .mat-raised-button.mat-warm {
+    // color: $font-color-lightTheme;
+    background-color: $warm-color;
   }
 
-  //LIGHT THEME
-  .mat-simple-snackbar-action {
-    color: $font-color-lightTheme;
-  }
+  //RADIO BUTTONS
   .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple {
     background-color: red;
   }
@@ -198,26 +198,51 @@ $my-custom-typography: mat.define-light-theme(
 
 
   //colores dark theme
-  .dark-theme .mat-toolbar.mat-primary, .mat-toolbar.mat-accent, .mat-toolbar.mat-warm, .mat-toolbar.mat-success {
+  .dark-theme,  .dark-theme .mat-success, .dark-theme .mat-primary,  .dark-theme .mat-accent,  .dark-theme .mat-warm, .dark-theme .mat-snack-bar {
     color: $font-color-darkTheme;
-    
   }
-  .dark-theme  .primary {
-    color: $font-color-darkTheme;
-    background-color: #0050ef;
-  }
-  .dark-theme .accent {
-    background-color: #ffc038;
-  }
-  .dark-theme .mat-toolbar.mat-accent{
-    background-color: $accent-color;
-  }
+  
   // DARK THEME - SUCCESS
   .dark-theme  .success {
-    background-color: #f0fff342;
+    background-color: $success-color;
   }
   .dark-theme.mat-button.mat-success,
-  .mat-stroked-button.mat-success {
-    color: $font-color-darkTheme;
-    background-color: #f0fff342;
+  .mat-stroked-button.mat-success,
+  .mat-chip.mat-standard-chip.mat-success{
+    background-color: $success-color;
   }
+  //DARK-THEME - PRIMARY
+  .dark-theme.mat-button.mat-primary
+  .mat-stroked-button.mat-primary
+  .mat-chip.mat-standard-chip.mat-primary,
+  .dark-theme .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary{
+    background-color: $primary-color;
+  }
+  
+  .dark-theme .primary {
+    // color: $font-color-darkTheme;
+    background-color: $primary-color;
+  }
+  
+  //DARK- THEME - ACCENT
+
+  .dark-theme .accent {
+    background-color: $accent-color;
+  }
+
+  .dark-theme .mat-toolbar.mat-accent,
+  .dark-theme.mat-button.mat-accent,
+  .dark-theme .mat-stroked-button.mat-accent,
+  .mat-chip.mat-standard-chip.mat-accent,
+  .mat-chip.mat-standard-chip.mat-chip-selected.mat-accent{
+    background-color: $accent-color;
+  }
+
+  //DARK-THEME - WARM 
+  .dark-theme .warm,
+  .dark-theme .mat-chip.mat-standard-chip.mat-warm{
+    background-color: $warm-color;
+  }
+  // .dark-theme .mat-chip.mat-standard-chip{
+
+  // }

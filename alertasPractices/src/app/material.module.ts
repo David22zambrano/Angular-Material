@@ -6,19 +6,22 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSnackBar,MatSnackBarModule    } from '@angular/material/snack-bar';
 import { MatIconModule                    } from '@angular/material/icon';
 
-import { MatCheckboxModule                } from '@angular/material/checkbox';
-import { MatSidenav, MatSidenavModule     } from '@angular/material/sidenav';
-import { MatToolbarModule                 } from '@angular/material/toolbar';
-import { MatListModule                    } from '@angular/material/list';
-import { MatTabsModule                    } from '@angular/material/tabs';
-import { MatRadioModule                   } from '@angular/material/radio';
-import { MatSlideToggleModule             } from '@angular/material/slide-toggle';
-import { MatCardModule                    } from '@angular/material/card';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatChipsModule                   } from '@angular/material/chips';
-import { MatProgressBarModule             } from '@angular/material/progress-bar';
-import { MatDividerModule                 } from '@angular/material/divider';
-import { MatStepperModule                 } from '@angular/material/stepper';
+import { MatCheckboxModule                 } from '@angular/material/checkbox';
+import { MatSidenav, MatSidenavModule      }  from '@angular/material/sidenav';
+import { MatToolbarModule                  } from '@angular/material/toolbar';
+import { MatListModule                     } from '@angular/material/list';
+import { MatTabsModule                     } from '@angular/material/tabs';
+import { MatRadioModule                    } from '@angular/material/radio';
+import { MatSlideToggleModule              } from '@angular/material/slide-toggle';
+import { MatCardModule                     } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { MatChipsModule                    } from '@angular/material/chips';
+import { MatDividerModule                  } from '@angular/material/divider';
+import { MatStepperModule                  } from '@angular/material/stepper';
+import { MatProgressBarModule              } from '@angular/material/progress-bar';
+import { MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule                } from '@angular/material/paginator';
+
 
 
 
@@ -42,7 +45,10 @@ const componets = [
   MatCardModule,
   MatProgressBarModule,
   MatDividerModule,
-  MatStepperModule
+  MatStepperModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatPaginatorModule
 ]
 
 @NgModule({

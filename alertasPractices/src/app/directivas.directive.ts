@@ -4,8 +4,8 @@ import { Directive, ElementRef, HostListener, ViewContainerRef, Input, OnChanges
   selector: '[size]'
 })
 export class DirectivasDirective {
-  small: String  = '1.2rem';
-  paddingSmall: String = '.1rem .1rem'
+  small: String  = '1rem';
+  paddingSmall: String = '.4rem .4rem'
   
   medium: String = '1.2rem';
   paddingMedium: String = '.8rem. 8rem';

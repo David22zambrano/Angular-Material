@@ -16,6 +16,7 @@ import { MatTabComponent } from '../assets/componentes-material/mat-tab/mat-tab.
 import { HeaderComponent } from '../assets/componentes-material/header/header.component';
 import { DirectivasDirective } from './directivas.directive';
 import { SmallBottonDirective } from './directivas/small-botton.directive';
+import { TableComponent } from './table/table.component';
 
   
 
@@ -30,6 +31,7 @@ import { SmallBottonDirective } from './directivas/small-botton.directive';
     HeaderComponent,
     DirectivasDirective,
     SmallBottonDirective,
+    TableComponent,
 
   ],
   imports: [
