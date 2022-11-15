@@ -6,6 +6,7 @@ $font-color-darkTheme: #fff;
 $success-color: #00ef38;
 $primary-color: #0050ef;
 $accent-color: #ffc038;
+$warm-color: #ef0000;
 
 $dark-A100: #66bdff;
 $dark-A200 : #33a7ff;
@@ -51,11 +52,11 @@ $my-custom-typography: mat.define-typography-config(
   $title:        mat.define-typography-level(2.0rem, 3.2, 500),
   $subheading-2: mat.define-typography-level(1.6rem, 2.8, 400),
   $subheading-1: mat.define-typography-level(1.5rem, 2.4, 400),
-  $body-2:       mat.define-typography-level(1.4rem, 2.4, 500),
-  $body-1:       mat.define-typography-level(1.4rem, 2, 400),
-  $caption:      mat.define-typography-level(1.2rem, 2, 400),
+  $body-2:       mat.define-typography-level(1.4rem, 1, 500),
+  $body-1:       mat.define-typography-level(1.4rem, 1, 400),
+  $caption:      mat.define-typography-level(1.2rem, 1, 400),
   $button:       mat.define-typography-level(1.4rem, 1, 500),
-  $input:        mat.define-typography-level(1.2rem, 1, 400)
+  $input:        mat.define-typography-level(1.2rem, 1.2, 400)
 );
 
 $my-custom-typography: mat.define-light-theme(
@@ -141,6 +142,7 @@ $my-custom-typography: mat.define-light-theme(
     background-color: $primary-color;
   }
   .mat-button.mat-primary,
+
   .mat-stroked-button.mat-primary {
     color: $font-color-lightTheme;
     background-color: $primary-color;
@@ -192,7 +194,7 @@ $my-custom-typography: mat.define-light-theme(
   //LIGHT THEME - WARM COLOR
   .warm {
     color: $font-color-lightTheme !important;
-    background-color: #ef0000;
+    background-color: $warm-color;
   }
 
   //LIGHT THEME
@@ -200,10 +202,10 @@ $my-custom-typography: mat.define-light-theme(
     color: $font-color-lightTheme;
   }
   .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple {
-    background-color: red;
+    background-color: $warm-color;
   }
   .mat-radio-button.mat-accent .mat-radio-inner-circle{
-    background-color: red;
+    background-color: $warm-color;
   }
 
 
@@ -212,19 +214,26 @@ $my-custom-typography: mat.define-light-theme(
     color: $font-color-darkTheme;
     
   }
-  .dark-theme  .primary {
+  .dark-theme .mat-raised-button.mat-primary {
     color: $font-color-darkTheme;
     background-color: #0050ef;
   }
   .dark-theme .accent {
     background-color: #ffc038;
   }
+  .dark-theme .warm {
+    background-color: $warm-color;
+  }
+  .dark-theme .mat-raised-button.mat-warm{
+    color: $font-color-darkTheme;
+    background-color: $warm-color;
+  }
   .dark-theme .mat-toolbar.mat-accent{
     background-color: $accent-color;
   }
   // DARK THEME - SUCCESS
   .dark-theme  .success {
-    background-color: #f0fff342;
+    background-color: $success-color;
   }
   .dark-theme.mat-button.mat-success,
   .mat-stroked-button.mat-success {

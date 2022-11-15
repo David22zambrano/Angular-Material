@@ -1,12 +1,6 @@
-<section class="singup-form">
-  <form
-    fxLayout="column"
-    fxLayoutAlign="center center"
-    #f="ngForm"
-    fxLayoutGap="10"
-    (ngSubmit)="onSubmit(f)"
-  >
-    <mat-form-field>
+<section class="singup">
+  <form  class="singup__form aling-justify-center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field class="singup__mat-form-field">
       <input
         type="email"
         matInput
@@ -60,11 +54,12 @@
       Agree terms and conditions
     </mat-checkbox>
     <button
-      class="my-special-section"
+      class="button"
       type="submit"
       mat-stroked-button
       color="success"
       [disabled]="f.invalid"
+      size="small"
     >
       Submit
     </button>

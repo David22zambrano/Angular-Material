@@ -41,25 +41,27 @@
     margin: $margen-normal;
   }
   .margin-inline {
-    margin-inline: $margen-enlinea-peque;
+    margin-inline: $margen-enlinea-pequeño;
   }
   .margin-inline-normal {
-    margin-inline: $margen-enlinea-regular;
+    margin-inline: $margen-enlinea-normal;
   }
-  .margin-inline-regular{
-    margin-inline: $margen-enlinea-regular;
+  .margin-inline-normal{
+    margin-inline: $margen-enlinea-normal;
   }
-  
+  .marginTop{
+    margin-top: $margin-top;
+  }
   .padding {
     padding: $padding-normal;
   }
-  .padding-inline {
-    padding-inline: $padding-enlinea-peque;
-  }
+  // .padding-inline {
+  //   padding-inline: $padding-enlinea-peque;
+  // }
   .padding-inline-normal {
     padding-inline: $padding-enlinea-normal;
   }
-  .padding-inline-regular {
-    padding-inline: $padding-enlinea-regular;
+  .padding-inline-normal {
+    padding-inline: $padding-enlinea-normal;
   }
   

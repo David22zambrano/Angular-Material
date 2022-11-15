@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import {FormBuilder, Validators} from '@angular/forms';
 
 export interface Vegetable {
   name: string;
@@ -13,8 +14,14 @@ export interface Vegetable {
   styleUrls: ['./mat-tab.component.scss']
 })
 export class MatTabComponent implements OnInit {
-  
-  constructor(public snackBar: MatSnackBar) { }
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+  isLinear = false;
+  constructor(public snackBar: MatSnackBar, private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -63,4 +70,5 @@ export class MatTabComponent implements OnInit {
         duration: 3000,
       });
    }
+
 }

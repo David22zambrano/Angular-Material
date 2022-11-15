@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatChipsModule                   } from '@angular/material/chips';
 import { MatProgressBarModule             } from '@angular/material/progress-bar';
 import { MatDividerModule                 } from '@angular/material/divider';
+import { MatStepperModule                 } from '@angular/material/stepper';
 
 
 
@@ -40,7 +41,8 @@ const componets = [
   MatChipsModule,
   MatCardModule,
   MatProgressBarModule,
-  MatDividerModule
+  MatDividerModule,
+  MatStepperModule
 ]
 
 @NgModule({
