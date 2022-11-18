@@ -8,10 +8,10 @@ $primary-color: #0050ef;
 $accent-color : #ffc038;
 $warm-color   : #ef0000;
 
-$dark-A100 :  #66bdff;
-$dark-A200 : #33a7ff;
-$dark-A400 : #0090ff;
-$dark-A700 : #0082e6;
+$dark-success :  #66bdff;
+$dark-primary : #33a7ff;
+$dark-accent : #0090ff;
+$dark-warm : #0082e6;
 
 $my-palette: (
   50 : #e0e8eb,
@@ -24,10 +24,10 @@ $my-palette: (
   700 : #003447,
   800 : #002c3d,
   900 : #001e2d,
-  A100 : #66bdff,
-  A200 : #33a7ff,
-  A400 : #0090ff,
-  A700 : #0082e6,
+  A100 : $success-color,
+  A200 : $primary-color,
+  A400 : $accent-color,
+  A700 : $warm-color,
   contrast: (
       50 : #000000,
       100 : #000000,
@@ -39,10 +39,10 @@ $my-palette: (
       700 : #ffffff,
       800 : #ffffff,
       900 : #ffffff,
-      A100 : $dark-A100,
-      A200 : $dark-A200,
-      A400 : $dark-A400,
-      A700 : $dark-A700,
+      A100 : $dark-success,
+      A200 : $dark-primary,
+      A400 : $dark-accent,
+      A700 : $dark-warm,
   ),
 );
 
@@ -69,7 +69,7 @@ $my-custom-typography: mat.define-light-theme(
 
 @include mat.core($my-custom-typography);
 
-  $special-primary: mat.define-palette($my-palette);
+  $special-primary: mat.define-palette($my-palette, A200);
   $special-accent: mat.define-palette(mat.$pink-palette);
   $special-warm: mat.define-palette(mat.$red-palette);
   $special-typography: mat.define-typography-config($my-custom-typography);
@@ -85,7 +85,10 @@ $my-custom-typography: mat.define-light-theme(
   $dark-primary: mat.define-palette($my-palette, A400);
   $dark-accent: mat.define-palette(mat.$indigo-palette, 100);
   $dark-warm: mat.define-palette(mat.$red-palette, A100);
-  $dark-theme: mat.define-dark-theme($dark-primary,$dark-accent, $dark-warm);
+  $dark-theme: mat.define-dark-theme(
+     (colores :($dark-primary,$dark-accent, $dark-warm)),
+     (tipografia: ($my-custom-typography))
+    );
 
   @include mat.all-component-themes($special-theme);
   @include mat.button-color($special-theme);

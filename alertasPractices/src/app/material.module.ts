@@ -20,7 +20,7 @@ import { MatDividerModule                  } from '@angular/material/divider';
 import { MatStepperModule                  } from '@angular/material/stepper';
 import { MatProgressBarModule              } from '@angular/material/progress-bar';
 import { MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { MatPaginatorModule                } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule                } from '@angular/material/paginator';
 
 
 
@@ -48,7 +48,7 @@ const componets = [
   MatStepperModule,
   MatTableModule,
   MatPaginatorModule,
-  MatPaginatorModule
+  MatPaginatorModule,
 ]
 
 @NgModule({
